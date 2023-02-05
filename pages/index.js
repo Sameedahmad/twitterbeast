@@ -42,7 +42,7 @@ function IndexPage() {
 	return (
 		<div>
 			<Head>
-				<title>AI Tweet Generator - Get Instant Inspiration </title>
+				<title>Tweet Reply with AI - Get Instant Inspiration </title>
 				<meta name='description' content='AI Tweet Generator' />
 				<link rel='icon' href='/favicon.ico' />;
 			</Head>
