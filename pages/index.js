@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Head from "next/head";
+//write the head element and the title and description it's next.js
+
+//use the favicon present int the public folder named favicon.ico
 
 const prompts = [
 	"Add hilarious joke with an emoji as a response to the below tweet",
@@ -37,6 +41,11 @@ function IndexPage() {
 
 	return (
 		<div>
+			<Head>
+				<title>AI Tweet Generator - Get Instant Inspiration </title>
+				<meta name='description' content='AI Tweet Generator' />
+				<link rel='icon' href='/favicon.ico' />;
+			</Head>
 			<div class=' bg-gray-900 p-4 text-center text-white'>
 				<h2 class='text-3xl font-bold'>
 					Say Goodbye to Time-Consuming Tweet Replies
@@ -52,6 +61,7 @@ function IndexPage() {
 							class='w-full p-2 rounded-lg shadow-sm'
 							value={prompt}
 							onChange={(e) => setPrompt(e.target.value)}
+							style={{ outlineColor: "#e0e0e0" }}
 						/>
 					</div>
 					<button
