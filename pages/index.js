@@ -6,21 +6,21 @@ import Head from "next/head";
 //use the favicon present int the public folder named favicon.ico
 
 const prompts = [
-	"Add hilarious joke with an emoji as a response to the below tweet",
-	"Add thoughtful comment on the below tweet sound like a typical Twitter user",
-	"Add a witty and humorous response to the below tweet",
-	"Add a sarcastic and snarky comment to the below tweet",
-	"Add a lighthearted and playful comment to the below tweet",
-	"Add a politically incorrect response to the below tweet",
-	"Create a tweet that offers a solution to the problem mentioned in the original tweet",
-	"Generate a tweet that shares a personal experience related to the original tweet",
-	"Compose a tweet that provides a motivational or inspirational quote related to the original tweet",
-	"Write a tweet that offers a different perspective or alternative solution to the original tweet",
-	"Create a tweet that asks a thought-provoking question related to the original tweet",
-	"Generate a tweet that shares a relevant statistic or fact related to the original tweet",
-	"Write a tweet that offers a valuable resource or tool related to the original tweet",
-	"Ask a thought-provoking question related to the below tweet",
-	"Compose a tweet that summarizes the main points of the original tweet in a simple and concise manner",
+	"Add hilarious joke with an emoji as a response to the below tweet, no #hashtags please",
+	"Add thoughtful comment on the below tweet sound like a typical Twitter user, no #hashtags please",
+	"Add a witty and humorous response to the below tweet, no #hashtags please",
+	"Add a sarcastic and snarky comment to the below tweet, no #hashtags please",
+	"Add a lighthearted and playful comment to the below tweet, no #hashtags please",
+	"Add a politically incorrect response to the below tweet, no #hashtags please",
+	"Create a tweet that offers a solution to the problem mentioned in the original tweet, no #hashtags please",
+	"Generate a tweet that shares a personal experience related to the original tweet, no #hashtags please",
+	"Compose a tweet that provides a motivational or inspirational quote related to the original tweet, no #hashtags please",
+	"Write a tweet that offers a different perspective or alternative solution to the original tweet, no #hashtags please",
+	"Create a tweet that asks a thought-provoking question related to the original tweet, no #hashtags please",
+	"Generate a tweet that shares a relevant statistic or fact related to the original tweet, no #hashtags please",
+	"Write a tweet that offers a valuable resource or tool related to the original tweet, no #hashtags please",
+	"Ask a thought-provoking question related to the below tweet, no #hashtags please",
+	"Compose a tweet that summarizes the main points of the original tweet in a simple and concise manner, no #hashtags please",
 ];
 
 function IndexPage() {
@@ -74,6 +74,8 @@ function IndexPage() {
 					<div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
 						{responses.map((response, index) => {
 							if (!response) return null;
+
+							if (response.length < 10) return null;
 							return (
 								<div
 									key={index}
