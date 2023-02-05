@@ -15,6 +15,7 @@ const prompts = [
 	"Create a tweet that asks a thought-provoking question related to the original tweet",
 	"Generate a tweet that shares a relevant statistic or fact related to the original tweet",
 	"Write a tweet that offers a valuable resource or tool related to the original tweet",
+	"Ask a thought-provoking question related to the below tweet",
 	"Compose a tweet that summarizes the main points of the original tweet in a simple and concise manner",
 ];
 
@@ -36,15 +37,17 @@ function IndexPage() {
 
 	return (
 		<div>
-			<div class='bg-gray-900 p-4 text-center text-white'>
-				<h2 class='text-2xl font-bold'>Twitter AI Replier</h2>
-				<p class='text-sm'>Generate intelligent replies to tweets using AI</p>
+			<div class=' bg-gray-900 p-4 text-center text-white'>
+				<h2 class='text-3xl font-bold'>
+					Say Goodbye to Time-Consuming Tweet Replies
+				</h2>
+				<p class='text-normal mt-1'> Get Instant Inspiration with AI </p>
 			</div>
-			<div class='w-full max-w-4xl mx-auto p-4'>
+			<div class='w-full max-w-4xl mx-auto p-4 '>
 				<form onSubmit={handleSubmit}>
-					<div class='bg-white rounded-lg shadow-lg p-4'>
+					<div class='bg-white rounded-lg shadow-lg p-4 border-4'>
 						<textarea
-							placeholder='Paste a tweet here that you would want to reply to'
+							placeholder='Paste a tweet here that you would want to generate reply for'
 							rows='8'
 							class='w-full p-2 rounded-lg shadow-sm'
 							value={prompt}
@@ -52,7 +55,7 @@ function IndexPage() {
 						/>
 					</div>
 					<button
-						class='mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full'
+						class='mt-4 bg-gray-700 hover:bg-gray-900 text-white font-bold py-2 px-4 rounded-full'
 						type='submit'>
 						Generate Replies
 					</button>
