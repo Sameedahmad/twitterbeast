@@ -42,7 +42,7 @@ function IndexPage() {
 	return (
 		<div>
 			<Head>
-				<title>Tweet Reply with AI - Get Instant Inspiration </title>
+				<title>TweetGenie - Get Instant Inspiration </title>
 				<meta name='description' content='AI Tweet Generator' />
 				<link rel='icon' href='/favicon.ico' />;
 			</Head>
@@ -50,7 +50,7 @@ function IndexPage() {
 				<h2 class='text-3xl font-bold'>
 					Say Goodbye to Time-Consuming Tweet Replies
 				</h2>
-				<p class='text-normal mt-1'> Get Instant Inspiration with AI </p>
+				<p class='text-normal mt-1'> Get Instant Inspiration from AI </p>
 			</div>
 			<div class='w-full max-w-4xl mx-auto p-4 '>
 				<form onSubmit={handleSubmit}>
