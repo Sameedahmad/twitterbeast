@@ -70,6 +70,13 @@ function IndexPage() {
 						Generate Replies
 					</button>
 				</form>
+				<div class='text-right'>
+					<p onClick={() => setResponses([])} class='cursor-pointer'>
+						<span className='text-lg transition-transform duration-200 transform hover:animate-pulse'>
+							🗑️
+						</span>
+					</p>
+				</div>
 				<div class='mt-4'>
 					<div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4'>
 						{responses.map((response, index) => {
